@@ -3,15 +3,15 @@
 
 #include "stm32u5xx_hal.h"
 #include <stdbool.h>
-// Display Resolution
+
 #define EPD_WIDTH  480
 #define EPD_HEIGHT 280
 
-// Définir les couleurs
+
 #define BLACK 0x00
 #define WHITE 0xFF
 
-// Prototypes des fonctions pour initialiser et contrôler l'écran e-Paper
+
 void SSD1677_Init(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin, GPIO_TypeDef *dc_port, uint16_t dc_pin, GPIO_TypeDef *reset_port, uint16_t reset_pin, GPIO_TypeDef *busy_port, uint16_t busy_pin);
 void SSD1677_Clear(uint8_t mode);
 void SSD1677_SetCursor(uint16_t x, uint16_t y);
